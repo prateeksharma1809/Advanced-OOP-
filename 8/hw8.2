@@ -1,0 +1,40 @@
+HW 8.2 -->
+
+1.  PUBLIC STATIC <T EXTENDS COMPARABLE<? SUPER T>> VOID SORT(LIST<T> LIST)
+
+Method --> 'sort': A public static void function.
+# accepts a List of type T.
+# T must be a type that implements the Comparable interface.
+# The <? super T> part allows the use of a superclass of T to provide more flexibility 
+(it can be the any type and its parent classes) {applying lower bound} in the types that can be sorted.
+
+
+2. PUBLIC STATIC <T> VOID SORT(LIST<T> LIST, COMPARATOR<? SUPER T> C)
+
+# Method --> 'sort': A public static void function.
+This method takes two parameters:
+ 1. List<T> list: A list of type T.
+ 2.comparator<? super t> c: The <? super T> provides for flexibility in the types that the object c of comparator can work with.
+ (it can be the any type ,i.e, wildcard and its superclasses) {applying lower bound}
+
+3. PUBLIC STATIC <T> INT BINARYSEARCH(LIST<? EXTENDS COMPARABLE<? SUPER T>> LIST, T KEY)
+
+Method --> 'binarySearch': A public static int function.
+# This method takes two parameters:
+ 1. List<? extends Comparable<? super T>> list: The List can hold elements that implement the Comparable interface or are a superclass of T {lower bound}.
+ 2. T key: Another parameter of type T.
+ 
+4. PUBLIC STATIC VOID SHUFFLE(LIST<?> LIST)
+
+Method --> 'shuffle': A public static void function.
+# This method takes one parameter:
+List<?> list: This parameter is a list of elements but ? indicates wildcard, which denotes that the type of the List is unknown.
+
+5. PUBLIC STATIC <T> VOID COPY(LIST<? SUPER T> DEST, LIST<? EXTENDS T> SRC)
+
+Method --> 'copy': A public static void function.
+
+# This method takes two parameters:
+1. List<? super T> dest: A list of type T and its superclass {puts a lower bound}
+2. List<? extends T> src: A list of type T and its subclasses {puts an upper bound}
+
